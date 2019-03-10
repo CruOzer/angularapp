@@ -1,0 +1,8 @@
+<h2>{{user.firstName }} {{user.lastName}}
+  <small><button (click)='user.hide = !user.hide;' class="btn btn-dark btn-sm"><i [ngClass]="user.hide ? 'fa fa-plus' : 'fa fa-minus'"></i></button></small></h2>
+<ul *ngIf="!user.hide" class="list-group">
+  <li class="list-group-item">
+    E-Mail: {{user.email}}
+  </li>
+  <li class="list-group-item">Joined: {{user.registered | date:"longDate"}}</li>
+</ul>

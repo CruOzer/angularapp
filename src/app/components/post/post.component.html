@@ -1,0 +1,11 @@
+<a [routerLink]="['/posts']" class="btn btn.light btn-sm mb-3">Back</a>
+<h2>Post</h2>
+<div *ngIf="post" class="card">
+  <div class="card-body">
+    <h3>{{post.title}}</h3>
+    <p>{{post.body}}</p>
+    <hr>
+    <button (click)="deletePost(post)" class="btn btn-danger btn-sm"><i class="fa fa-remove"></i></button>
+    <button (click)="editPost(post)" class="btn btn-light btn-sm"><i class="fa fa-pencil"></i></button>
+  </div>
+</div>
